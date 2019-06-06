@@ -50,12 +50,19 @@ namespace Static_Image_Generator
 
         private void Btn_save_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Images|*.png;*.bmp;*.jpg;*.jpeg";
-            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK && picturebox_result.Image != null)
+            if (picturebox_result.Image == null)
             {
-                picturebox_result.Image.Save(sfd.FileName);
+                MessageBox.Show("Can't save, no image here!");
+            } else
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Images|*.png;*.bmp;*.jpg;*.jpeg";
+                if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    picturebox_result.Image.Save(sfd.FileName);
+                }
             }
+
         }
 
         private void Rand_alpha_check_CheckedChanged(object sender, EventArgs e)

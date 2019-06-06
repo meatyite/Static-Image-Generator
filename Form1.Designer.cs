@@ -44,9 +44,12 @@
             // 
             // picturebox_result
             // 
+            this.picturebox_result.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picturebox_result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picturebox_result.Location = new System.Drawing.Point(12, 12);
             this.picturebox_result.Name = "picturebox_result";
             this.picturebox_result.Size = new System.Drawing.Size(663, 426);
+            this.picturebox_result.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox_result.TabIndex = 0;
             this.picturebox_result.TabStop = false;
             // 
@@ -70,7 +73,7 @@
             0,
             0});
             this.num_Width.Minimum = new decimal(new int[] {
-            320,
+            4,
             0,
             0,
             0});
@@ -112,7 +115,7 @@
             0,
             0});
             this.num_Height.Minimum = new decimal(new int[] {
-            320,
+            4,
             0,
             0,
             0});
