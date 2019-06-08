@@ -37,9 +37,14 @@
             this.num_Height = new System.Windows.Forms.NumericUpDown();
             this.btn_save = new System.Windows.Forms.Button();
             this.rand_alpha_check = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.num_font_size = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_result)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Height)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_font_size)).BeginInit();
             this.SuspendLayout();
             // 
             // picturebox_result
@@ -142,20 +147,75 @@
             // rand_alpha_check
             // 
             this.rand_alpha_check.AutoSize = true;
-            this.rand_alpha_check.Font = new System.Drawing.Font("Nachlieli CLM", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.rand_alpha_check.Font = new System.Drawing.Font("Miriam CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.rand_alpha_check.Location = new System.Drawing.Point(681, 162);
             this.rand_alpha_check.Name = "rand_alpha_check";
-            this.rand_alpha_check.Size = new System.Drawing.Size(126, 18);
+            this.rand_alpha_check.Size = new System.Drawing.Size(128, 21);
             this.rand_alpha_check.TabIndex = 7;
             this.rand_alpha_check.Text = "Randomize Alpha";
             this.rand_alpha_check.UseVisualStyleBackColor = true;
             this.rand_alpha_check.CheckedChanged += new System.EventHandler(this.Rand_alpha_check_CheckedChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(681, 234);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(107, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Nachlieli CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button1.Location = new System.Drawing.Point(681, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 27);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Add Text";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // num_font_size
+            // 
+            this.num_font_size.Location = new System.Drawing.Point(681, 277);
+            this.num_font_size.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.num_font_size.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.num_font_size.Name = "num_font_size";
+            this.num_font_size.Size = new System.Drawing.Size(120, 20);
+            this.num_font_size.TabIndex = 10;
+            this.num_font_size.Value = new decimal(new int[] {
+            56,
+            0,
+            0,
+            0});
+            this.num_font_size.ValueChanged += new System.EventHandler(this.Num_font_size_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nachlieli CLM", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(681, 257);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Font size:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.num_font_size);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rand_alpha_check);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.num_Height);
@@ -172,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_result)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Height)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_font_size)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +248,10 @@
         private System.Windows.Forms.NumericUpDown num_Height;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.CheckBox rand_alpha_check;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown num_font_size;
+        private System.Windows.Forms.Label label3;
     }
 }
 

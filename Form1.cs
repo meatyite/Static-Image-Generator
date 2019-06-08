@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,6 +67,21 @@ namespace Static_Image_Generator
         }
 
         private void Rand_alpha_check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            Graphics g = Graphics.FromImage(picturebox_result.Image);
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.DrawString(textBox1.Text, new Font("Tahoma",Convert.ToInt32(num_font_size.Value)), Brushes.Black, new RectangleF(0, 0, picturebox_result.Image.Width, picturebox_result.Image.Height));
+            picturebox_result.Image = picturebox_result.Image;
+        }
+
+        private void Num_font_size_ValueChanged(object sender, EventArgs e)
         {
 
         }
