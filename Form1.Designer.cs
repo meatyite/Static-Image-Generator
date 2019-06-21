@@ -39,12 +39,11 @@
             this.rand_alpha_check = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.num_font_size = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_result)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Height)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_font_size)).BeginInit();
             this.SuspendLayout();
             // 
             // picturebox_result
@@ -174,46 +173,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // num_font_size
-            // 
-            this.num_font_size.Location = new System.Drawing.Point(681, 277);
-            this.num_font_size.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.num_font_size.Minimum = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.num_font_size.Name = "num_font_size";
-            this.num_font_size.Size = new System.Drawing.Size(120, 20);
-            this.num_font_size.TabIndex = 10;
-            this.num_font_size.Value = new decimal(new int[] {
-            56,
-            0,
-            0,
-            0});
-            this.num_font_size.ValueChanged += new System.EventHandler(this.Num_font_size_ValueChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nachlieli CLM", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label3.Location = new System.Drawing.Point(681, 257);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Font size:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Nachlieli CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button2.Location = new System.Drawing.Point(681, 260);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 44);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Choose Text Font";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.num_font_size);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rand_alpha_check);
@@ -232,7 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_result)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Height)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_font_size)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,8 +235,8 @@
         private System.Windows.Forms.CheckBox rand_alpha_check;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown num_font_size;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
     }
 }
 
