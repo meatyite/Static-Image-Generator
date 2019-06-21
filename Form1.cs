@@ -13,9 +13,11 @@ namespace Static_Image_Generator
 {
     public partial class Form1 : Form
     {
+        public Font add_txt_font = new Font("Tahoma", 56);
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -77,13 +79,22 @@ namespace Static_Image_Generator
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.SmoothingMode = SmoothingMode.AntiAlias;
-            g.DrawString(textBox1.Text, new Font("Tahoma",Convert.ToInt32(num_font_size.Value)), Brushes.Black, new RectangleF(0, 0, picturebox_result.Image.Width, picturebox_result.Image.Height));
+            g.DrawString(textBox1.Text, this.add_txt_font, Brushes.Black, new RectangleF(0, 0, picturebox_result.Image.Width, picturebox_result.Image.Height));
             picturebox_result.Image = picturebox_result.Image;
         }
 
         private void Num_font_size_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            FontDialog fnt_dlg = new FontDialog();
+            if (fnt_dlg.ShowDialog() != DialogResult.Cancel)
+            {
+                this.add_txt_font = fnt_dlg.Font;
+            }
         }
     }
 }
